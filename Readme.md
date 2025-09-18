@@ -2,6 +2,7 @@
 
 * Студент: [Анна Игнатова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2275573).
 * Наставник:[Ирина Антипина](https://htmlacademy.ru/profile/id2108789).
+*  Сайт: [проект Седона](https://anni-spb.github.io/2275573-sedona-2/)
 
 ---
 
