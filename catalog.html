@@ -29,12 +29,12 @@
 
           <ul class="user-list nav-list">
             <li class="user-item">
-              <a class="user-link" href="#">
+              <a class="user-link nav-link" href="#">
                 <span class="visually-hidden">Поиск</span>
               </a>
             </li>
             <li class="user-item">
-              <a class="user-link" href="#">
+              <a class="user-link nav-link" href="#">
                 <span class="visually-hidden">Избранное количество отелей</span>
                 <span>12</span>
               </a>
@@ -46,7 +46,7 @@
         </nav>
       </header>
 
-      <main class="main-catalog">
+      <main class="main-catalog main-index">
         <section class="hotel-header">
           <h1 class="catalog-title">Гостиницы Седоны</h1>
           <ul class="breadcrumbs">
@@ -136,23 +136,25 @@
         </section>
 
         <section class="hotels">
-          <h2 class="visually-hidden">Результат поиска гостиниц</h2>
-          <p class="hotels-result">Найдено гостиниц:<span>38</span></p>
-          <select class="hotels-select" aria-label="Сортировка">
-            <option value="popular">Сначала популярные</option>
-            <option value="cheap" selected>Сначала дешевые</option>
-            <option value="expensive">Сначала дорогие</option>
-          </select>
-          <div class="display-cards">
-            <a class="button-cards button-current" href="catalog.html?view=tile">
-              <span class="visually-hidden">Показать карточки</span>
-            </a>
-            <a class="button-cards" href="catalog.html?view=card">
-              <span class="visually-hidden">Показать крупным планом</span>
-            </a>
-            <a class="button-cards" href="catalog.html?view=list">
-              <span class="visually-hidden">Показать список</span>
-            </a>
+          <div class="hotels-wrapper">
+            <h2 class="visually-hidden">Результат поиска гостиниц</h2>
+            <p class="hotels-result">Найдено гостиниц:<span>38</span></p>
+            <select class="hotels-select" aria-label="Сортировка" name="select-control">
+              <option value="popular">Сначала популярные</option>
+              <option value="cheap" selected>Сначала дешевые</option>
+              <option value="expensive">Сначала дорогие</option>
+            </select>
+            <div class="display-cards">
+              <a class="button-cards button-current" href="catalog.html?view=tile">
+                <span class="visually-hidden">Показать карточки</span>
+              </a>
+              <a class="button-cards" href="catalog.html?view=card">
+                <span class="visually-hidden">Показать крупным планом</span>
+              </a>
+              <a class="button-cards" href="catalog.html?view=list">
+                <span class="visually-hidden">Показать список</span>
+              </a>
+            </div>
           </div>
 
           <ul class="hotels-list">
