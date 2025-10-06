@@ -389,13 +389,6 @@ body {
 
 /* Кнопки */
 
-.subscribe-button,
-.search-button {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
-}
-
 .button {
   font-family: inherit;
   color: #ffffff;
@@ -407,6 +400,19 @@ body {
   line-height: 20px;
   border: none;
 }
+
+.subscribe-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
+.search-button {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+}
+
 
 .button-primary {
   background-color: #82b3d3;
