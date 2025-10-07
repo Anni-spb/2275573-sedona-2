@@ -168,14 +168,14 @@ body {
   padding: 114px 83px;
 }
 
-.advantages-item-img {
+.advantages-item-large {
   display: flex;
   width: 1200px;
   margin: 0;
   padding: 0;
 }
 
-.advantages-item-img .advantages-title {
+.advantages-item-large .advantages-title {
   color: #ffffff;
 }
 
