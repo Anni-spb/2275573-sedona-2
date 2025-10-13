@@ -22,7 +22,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">О Cедоне</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item nav-item-current">
               <a class="nav-link" href="catalog.html" aria-current="page">Гостиницы</a>
             </li>
           </ul>
@@ -109,24 +109,28 @@
             </fieldset>
             <fieldset class="filter-group">
               <legend class="filter-title">Стоимость, ₽:</legend>
-              <div class="filter-input">
+              <div class="range">
                 <div class="input-wrapper">
                   <label class="filter-item-label" for="min-price">от</label>
-                  <input class="filter-item-input" type="number" name="min-price" id="min-price" min="0" value="0">
+                  <input class="filter-item-input input-min" type="number" name="min-price" id="min-price" min="0"
+                    value="0">
                 </div>
                 <div class="input-wrapper">
                   <label class="filter-item-label" for="max-price">до</label>
-                  <input class="filter-item-input" type="number" name="max-price" id="max-price" min="0" value="9000">
+                  <input class="filter-item-input input-max" type="number" name="max-price" id="max-price" min="0"
+                    value="9000">
                 </div>
-              </div>
-              <div class="ranger-controls">
-                <div class="bar">
-                  <span class="visually-hidden">Диапазон цены</span>
+                <div class="ranger-controls">
+                  <div class="bar">
+                    <div class="ranger-track"></div>
+                    <span class="visually-hidden">Диапазон цены</span>
+                  </div>
+                  <button class="ranger-toggle ranger-toggle-min" type="button"><span class="visually-hidden">Стартовая
+                      цена</span></button>
+                  <button class="ranger-toggle ranger-toggle-max" type="button"><span
+                      class="visually-hidden">Максимальная
+                      цена</span></button>
                 </div>
-                <button class="ranger-toggle ranger-toggle-min" type="button"><span class="visually-hidden">Стартовая
-                    цена</span></button>
-                <button class="ranger-toggle ranger-toggle-max" type="button"><span class="visually-hidden">Максимальная
-                    цена</span></button>
               </div>
             </fieldset>
 
@@ -268,25 +272,28 @@
       <footer class="main-footer">
         <ul class="social-list">
           <li class="social-item">
-            <a class="social-icon" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <a class="social-icon icon-vk" href="https://vk.com/htmlacademy" target="_blank" rel="noreferrer noopener">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social-item">
-            <a class="social-icon" href="https://t.me/htmlacademy" target="_blank" rel="noreferrer noopener">
+            <a class="social-icon icon-telegram" href="https://t.me/htmlacademy" target="_blank"
+              rel="noreferrer noopener">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
-          <li class="footer-social-item">
-            <a class="social-icon" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
+          <li class="social-item">
+            <a class="social-icon icon-youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank"
               rel="noreferrer noopener">
               <span class="visually-hidden">Ютуб</span>
             </a>
           </li>
         </ul>
-        <a class="contact-phone" href="tel:+78128121212">
-          <span class="visually-hidden">Позвоните по номеру</span> +7 (812) 812-12-12
-        </a>
+        <div class="phone-wrapper">
+          <a class="contact-phone" href="tel:+78128121212">
+            <span class="visually-hidden">Позвоните по номеру</span> +7 (812) 812-12-12
+          </a>
+        </div>
         <a class="contact-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank"
           rel="noreferrer noopener">
           <span class="visually-hidden">Сделано в HTMLAcademy</span>
