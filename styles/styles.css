@@ -244,9 +244,13 @@ body {
 }
 
 
-.advantages-wrapper-reverse {
+.advantages-item-large-reverse {
   order: 1;
   grid-template-columns: 1fr 400px;
+}
+
+.advantages-item-large-reverse .advantages-wrapper {
+  order: 1;
 }
 
 .advantages-title {
