@@ -27,12 +27,6 @@
   overflow: hidden;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-
 html {
   height: 100%;
 }
@@ -87,6 +81,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  max-width: 464px;
 }
 
 .user-list {
@@ -106,7 +101,8 @@ body {
   padding: 20px 16px 19px;
 }
 
-.nav-item .nav-link:hover {
+.nav-item .nav-link:hover,
+.nav-item .nav-link:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -133,7 +129,26 @@ body {
   padding: 20px 12px;
 }
 
+.user-item:first-child .user-link:hover,
+.user-item:nth-last-child(2) .user-link:hover,
+.user-item:nth-last-child(2) .user-link .user-likes:hover,
+.nav-logo:hover {
+  opacity: 0.8;
+}
 
+.user-item:first-child .user-link:focus,
+.user-item:nth-last-child(2) .user-link:focus,
+.user-item:nth-last-child(2) .user-link .user-likes:focus,
+.nav-logo:focus {
+  opacity: 0.8;
+}
+
+.user-item:first-child .user-link:active,
+.user-item:nth-last-child(2) .user-link:active,
+.user-item:nth-last-child(2) .user-link .user-likes:active,
+.nav-logo:active {
+  opacity: 0.6;
+}
 
 .user-link.button {
   padding: 8px 34px;
@@ -154,7 +169,7 @@ body {
   border-radius: 50%;
   padding: 5px;
   min-width: 20px;
-  height: 20px;
+  min-height: 20px;
   box-sizing: border-box;
 }
 
@@ -233,6 +248,9 @@ body {
 
 .advantages-img {
   display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 
@@ -382,7 +400,8 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-.subscribe-form input:hover {
+.subscribe-form input:hover,
+.subscribe-form input:focus {
   background-color: #e5e5e5;
 }
 
@@ -447,7 +466,8 @@ body {
   mask-image: url("../images/social-icons/youtube.svg");
 }
 
-.social-icon:hover::before {
+.social-icon:hover::before,
+.social-icon:focus::before {
   background-color: #68a2ca;
 }
 
@@ -462,6 +482,7 @@ body {
 }
 
 .contact-phone {
+  display: block;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
@@ -471,7 +492,8 @@ body {
   box-sizing: border-box;
 }
 
-.contact-phone:hover {
+.contact-phone:hover,
+.contact-phone:focus {
   color: #756157;
 }
 
@@ -488,7 +510,8 @@ body {
   margin-left: auto;
 }
 
-.contact-link:hover {
+.contact-link:hover,
+.contact-link:focus {
   background-color: #756157;
 }
 
@@ -517,6 +540,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   list-style: none;
   margin: 0 0 40px;
@@ -540,6 +564,10 @@ body {
 
 .breadcrumbs-link:hover {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-link:focus {
+  color: #ffffff;
 }
 
 .breadcrumbs-link:active {
@@ -639,6 +667,10 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.control:focus {
+  color: #ffffff;
+}
+
 .control:active {
   color: rgba(255, 255, 255, 0.3);
 }
@@ -725,6 +757,11 @@ body {
   margin: 0;
 }
 
+.filter-item-input:hover,
+.filter-item-input:focus {
+  background-color: #e6e6e6;
+}
+
 .input-min {
   border-radius: 4px 0 0 4px;
 }
@@ -767,7 +804,8 @@ body {
   cursor: pointer;
 }
 
-.ranger-toggle:hover {
+.ranger-toggle:hover,
+.ranger-toggle:focus {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
@@ -867,6 +905,12 @@ body {
   margin: 0;
 }
 
+.hotel-card-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .hotel-card-link {
   text-decoration: none;
 }
@@ -919,6 +963,7 @@ body {
 .pagination {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 0;
   padding: 80px 0 60px;
@@ -972,7 +1017,8 @@ body {
   background-color: #82b3d3;
 }
 
-.button-primary:hover {
+.button-primary:hover,
+.button-primary:focus {
   background-color: #68a2ca;
 }
 
@@ -985,7 +1031,8 @@ body {
   background-color: #756157;
 }
 
-.button-secondary:hover {
+.button-secondary:hover,
+.button-added:focus {
   background-color: #615048;
 }
 
@@ -998,7 +1045,8 @@ body {
   background-color: #7db54f;
 }
 
-.button-added:hover {
+.button-added:hover,
+.button-added:focus {
   background-color: #6c9e42;
 }
 
@@ -1019,12 +1067,17 @@ body {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.filter-reset:focus {
+  color: #ffffff;
+}
+
 .filter-reset:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .filter-reset:disabled {
-  color: transparent;
+  color: rgba(255, 255, 255, 0.1);
+
 }
 
 .filter-button-wrapper .button {
