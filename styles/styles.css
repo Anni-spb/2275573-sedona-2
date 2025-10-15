@@ -482,7 +482,6 @@ body {
 }
 
 .contact-phone {
-  display: block;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
@@ -501,21 +500,25 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
-.contact-link {
-  width: 115px;
-  min-height: 34px;
+.contact-link::before {
+  content: "";
+  width: 116px;
+  height: 34px;
   display: block;
-  mask: url("../images/html-academy-logo.svg") no-repeat center;
   background-color: #000000;
-  margin-left: auto;
+  mask-image: url(../images/html-academy-logo.svg);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 116px 34px;
 }
 
-.contact-link:hover,
-.contact-link:focus {
+
+.contact-link:hover::before,
+.contact-link:focus::before {
   background-color: #756157;
 }
 
-.contact-link:active {
+.contact-link:active::before {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
