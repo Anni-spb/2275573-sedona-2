@@ -129,27 +129,6 @@ body {
   padding: 20px 12px;
 }
 
-.user-item:first-child .user-link:hover,
-.user-item:nth-last-child(2) .user-link:hover,
-.user-item:nth-last-child(2) .user-link .user-likes:hover,
-.nav-logo:hover {
-  opacity: 0.8;
-}
-
-.user-item:first-child .user-link:focus,
-.user-item:nth-last-child(2) .user-link:focus,
-.user-item:nth-last-child(2) .user-link .user-likes:focus,
-.nav-logo:focus {
-  opacity: 0.8;
-}
-
-.user-item:first-child .user-link:active,
-.user-item:nth-last-child(2) .user-link:active,
-.user-item:nth-last-child(2) .user-link .user-likes:active,
-.nav-logo:active {
-  opacity: 0.6;
-}
-
 .user-link.button {
   padding: 8px 34px;
   margin-left: 20px;
@@ -173,17 +152,39 @@ body {
   box-sizing: border-box;
 }
 
-.user-item:first-child .user-link {
+.search-link {
   background: url("../images/search.svg") no-repeat 0 0;
   background-position: center;
   background-size: auto;
 }
 
-.user-item:nth-last-child(2) .user-link {
+.like-link {
   position: relative;
   background: url("../images/heart.svg") no-repeat 0 0;
   background-position: center;
   background-size: auto;
+}
+
+
+.search-link:hover,
+.like-link:hover,
+.like-link .user-likes:hover,
+.nav-logo:hover {
+  opacity: 0.6;
+}
+
+.search-link:focus,
+.like-link:focus,
+.like-link .user-likes:focus,
+.nav-logo:focus {
+  opacity: 0.6;
+}
+
+.search-link:active,
+.like-link:active,
+.like-link.user-likes:active,
+.nav-logo:active {
+  opacity: 0.4;
 }
 
 .main-index {
