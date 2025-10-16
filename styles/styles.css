@@ -878,6 +878,8 @@ body {
 
 .display-cards {
   display: flex;
+  flex-wrap: wrap;
+  max-width: 220px;
   gap: 0 8px;
 }
 
