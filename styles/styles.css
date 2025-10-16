@@ -632,6 +632,10 @@ body {
   border: none;
 }
 
+.filter-group:not(:last-child) {
+  max-width: 160px;
+}
+
 .filter-group:nth-child(3) {
   margin-left: 70px;
 }
