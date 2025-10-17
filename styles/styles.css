@@ -42,13 +42,13 @@ body {
 }
 
 .page-container {
+  width: 1200px;
   display: flex;
   flex-direction: column;
   min-height: 100%;
   margin: 0 auto;
   background-color: #ffffff;
   text-align: center;
-  width: 1200px;
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -76,12 +76,12 @@ body {
 }
 
 .nav-list {
+  max-width: 454px;
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
-  max-width: 454px;
 }
 
 .user-list {
@@ -135,6 +135,8 @@ body {
 }
 
 .user-link span {
+  min-width: 20px;
+  min-height: 20px;
   color: #ffffff;
   font-size: 10px;
   line-height: 10px;
@@ -147,8 +149,6 @@ body {
   text-decoration: none;
   border-radius: 50%;
   padding: 5px;
-  min-width: 20px;
-  min-height: 20px;
   box-sizing: border-box;
 }
 
@@ -236,7 +236,7 @@ body {
   box-sizing: border-box;
   min-height: 385px;
   text-align: center;
-  padding: 114px 83px;
+  padding: 112px 83px;
 }
 
 .advantages-item-large {
@@ -248,8 +248,8 @@ body {
 }
 
 .advantages-img {
-  display: block;
   max-width: 100%;
+  display: block;
   height: auto;
   object-fit: contain;
 }
@@ -276,7 +276,7 @@ body {
 }
 
 .advantages-title {
-  max-width: 175px;
+  max-width: 172px;
   margin: 0 auto 30px;
   font-size: 24px;
   font-weight: 700;
@@ -288,8 +288,8 @@ body {
 
 .advantages .advantages-title::after {
   content: "";
-  display: block;
   width: 60px;
+  display: block;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   margin: 30px auto 0;
 }
@@ -313,9 +313,9 @@ body {
 }
 
 .service-header {
-  margin: 0 auto;
-  padding: 64px 0 64px;
   max-width: 515px;
+  margin: 0 auto;
+  padding: 64px 0 7px;
   grid-column: 1 / -1;
 }
 
@@ -326,9 +326,9 @@ body {
 
 .service-item:before {
   content: "";
-  display: block;
   width: 75px;
   height: 72px;
+  display: block;
 }
 
 .service-item:first-child::before {
@@ -342,9 +342,9 @@ body {
 }
 
 .service-item:nth-child(3)::before {
-  background: url("../images/service-icons/souvenirs.svg") no-repeat 0 0;
   width: 64px;
   height: 76px;
+  background: url("../images/service-icons/souvenirs.svg") no-repeat 0 0;
   margin: 0 auto 28px;
 }
 
@@ -377,8 +377,8 @@ body {
 }
 
 .subscribe-form {
-  display: flex;
   max-width: 684px;
+  display: flex;
   justify-content: center;
   margin-inline: auto;
   align-items: stretch;
@@ -387,11 +387,10 @@ body {
 
 .subscribe-form input {
   flex-grow: 1;
-  padding: 14px 20px;
+  padding: 15px 20px 14px;
   font-family: inherit;
   font-size: 18px;
   line-height: 1.33;
-  font-weight: 400;
   color: #000000;
   background-color: #f2f2f2;
   border: none;
@@ -424,20 +423,20 @@ body {
 }
 
 .social-list {
+  width: 282px;
   display: flex;
   flex-wrap: wrap;
-  width: 282px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .social-icon {
+  width: 48px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 48px;
-  height: 40px;
   position: relative;
 }
 
@@ -497,6 +496,10 @@ body {
   color: rgba(117, 97, 87, 0.3);
 }
 
+.contact-link {
+  margin-left: auto;
+}
+
 .contact-link::before {
   content: "";
   width: 116px;
@@ -518,8 +521,8 @@ body {
   background-color: rgba(117, 97, 87, 0.3);
 }
 
-/* Каталог */
 
+/* Каталог */
 
 .hotel-header {
   color: #ffffff;
@@ -552,12 +555,12 @@ body {
 }
 
 .breadcrumbs-link {
+  min-width: 13px;
+  min-height: 21px;
   display: flex;
   align-items: center;
   font-size: 16px;
   line-height: 21px;
-  min-width: 13px;
-  min-height: 21px;
   cursor: pointer;
 }
 
@@ -575,10 +578,10 @@ body {
 
 .breadcrumbs-item:first-child .breadcrumbs-link::before {
   content: "";
-  display: block;
-  background: url("../images/breadcrumbs-icon.svg") no-repeat center;
   width: 13px;
   height: 15px;
+  display: block;
+  background: url("../images/breadcrumbs-icon.svg") no-repeat center;
   background-size: contain;
   margin-top: 3px;
 }
@@ -593,11 +596,11 @@ body {
 
 .breadcrumbs-item:not(:last-child)::after {
   content: "";
+  width: 8px;
+  height: 10px;
   display: block;
   background: url("../images/arrow.svg") no-repeat;
   background-size: contain;
-  width: 8px;
-  height: 10px;
   margin: 3px 10px 0;
 }
 
@@ -627,9 +630,9 @@ body {
 }
 
 .filter-group {
+  min-width: 150px;
   margin: 0;
   padding: 0;
-  min-width: 150px;
   border: none;
 }
 
@@ -640,22 +643,6 @@ body {
 .filter-group:nth-of-type(3) {
   max-width: 300px;
   margin-left: 70px;
-}
-
-.filter-item-label {
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: 400;
-  color: #000000;
-}
-
-.filter-item-input {
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  color: #000000;
-  font-weight: 700;
-  background-color: #f2f2f2;
 }
 
 .filter-button-wrapper {
@@ -686,11 +673,11 @@ body {
 }
 
 .control-input {
+  width: 20px;
+  height: 20px;
   margin: 0;
   appearance: none;
   display: block;
-  width: 20px;
-  height: 20px;
   background-color: #ffffff;
   border-radius: 4px;
   flex-shrink: 0;
@@ -728,32 +715,31 @@ body {
 }
 
 .input-wrapper {
-  margin: 0;
   width: 143px;
+  margin: 0;
   display: grid;
-  grid-template-columns: 1fr 44px;
+  grid-template-columns: 1fr 54px;
   align-items: center;
 }
 
 .filter-item-label {
-  padding: 12px;
+  padding: 6px;
   grid-column: 2 / 3;
   grid-row: -1 / -1;
   z-index: 1;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
 }
 
 .filter-item-input {
+  min-width: 144px;
   grid-row: 1 / 2;
   grid-column: 1 / 3;
-  min-width: 144px;
-  padding-inline: 20px 50px;
-  padding-block: 12px;
+  padding: 13px 45px 11px 20px;
   font-family: inherit;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
   font-weight: 700;
   color: #000000;
   background-color: #f2f2f2;
@@ -793,20 +779,20 @@ body {
 }
 
 .ranger-track {
+  width: 226px;
+  height: 4px;
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  width: 78%;
-  height: 4px;
   background-color: #ffffff;
 }
 
 .ranger-toggle {
-  position: absolute;
-  top: 50%;
   width: 20px;
   height: 20px;
+  position: absolute;
+  top: 50%;
   padding: 0;
   background-color: #ffffff;
   border: none;
@@ -846,6 +832,7 @@ body {
 }
 
 .hotels-result {
+  max-width: 450px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -853,26 +840,25 @@ body {
   text-transform: uppercase;
   margin: 0;
   margin-right: auto;
-  max-width: 450px;
 }
 
 .hotels-select {
-  font-family: "PT Sans", sans-serif;
+  width: 292px;
+  font-family: inherit;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 21px;
   color: inherit;
   background-color: #ffffff;
-  appearance: none;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   padding: 12px 40px 12px 20px;
-  width: 292px;
   background-image: url("../images/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: right 17px center;
   cursor: pointer;
+  appearance: none;
 }
 
 .hotels-select:hover {
@@ -885,9 +871,9 @@ body {
 }
 
 .display-cards {
+  max-width: 220px;
   display: flex;
   flex-wrap: wrap;
-  max-width: 220px;
   gap: 0 8px;
 }
 
@@ -901,14 +887,14 @@ body {
 }
 
 .hotel-card {
-  padding: 20px 18px;
+  padding: 20px 19px 18px;
   border: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 4px;
   display: grid;
   grid-template-columns: 140px 140px;
   grid-template-rows: min-content 1fr;
-  gap: 20px;
+  gap: 16px 20px;
 }
 
 .hotel-card-title {
@@ -923,6 +909,7 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
 }
 
 .hotel-card-link {
@@ -956,6 +943,7 @@ body {
   text-align: center;
   align-content: center;
   border-radius: 4px;
+  min-height: 37px;
 }
 
 .stars {
@@ -992,7 +980,7 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   margin: 0;
-  padding: 80px 0 60px;
+  padding: 81px 0 0 0;
 }
 
 .pagination-item {
@@ -1000,12 +988,9 @@ body {
 }
 
 .pagination-more {
-  font-size: 22px;
-  font-weight: 400;
-  line-height: 26px;
-  padding-top: 16px;
-  display: block;
   min-width: 60px;
+  padding: 16px 0 0 0;
+  display: block;
 }
 
 /* Кнопки */
@@ -1107,13 +1092,13 @@ body {
 }
 
 .filter-button-wrapper .button {
-  padding: 8px 40px;
+  padding: 8px 50px;
 }
 
 .button-cards {
-  display: block;
   width: 48px;
   height: 48px;
+  display: block;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
@@ -1149,12 +1134,12 @@ body {
 
 .pagination-link {
   min-width: 60px;
+  display: block;
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
   text-decoration: none;
-  display: block;
   padding: 11px 10px;
 }
 
@@ -1168,24 +1153,24 @@ body {
 /* Модальное окно */
 
 .modal {
-  display: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 4;
-  width: 100%;
-  height: 100%;
+  z-index: 2;
   background-color: rgba(242, 242, 242, 0.8);
 }
 
-.modal-opened {
-  display: flex;
+.modal-closed {
+  display: none;
 }
 
 .modal-content {
+  width: 717px;
   position: relative;
   box-sizing: border-box;
-  width: 717px;
   margin: auto;
   padding: 64px 70px;
   background-color: #ffffff;
@@ -1198,9 +1183,10 @@ body {
   margin-bottom: 64px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 120%;
+  line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  text-align: left;
 }
 
 .modal-form {
@@ -1216,6 +1202,10 @@ body {
   column-gap: 15px;
 }
 
+.modal-form-field-group:last-of-type {
+  column-gap: 10px;
+}
+
 .modal-form-field-date {
   grid-column: span 2;
 }
@@ -1225,27 +1215,25 @@ body {
   margin-top: 12px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 24px;
   color: #000000;
   text-transform: capitalize;
   word-break: break-all;
 }
 
 .modal-form-input-date-wrapper {
-  display: grid;
   width: 440px;
+  display: grid;
   gap: 4px;
 }
 
 .modal-form-input {
   box-sizing: border-box;
-
   font-weight: 700;
   font-size: 18px;
-  line-height: 133%;
+  line-height: 24px;
   font-family: inherit;
   color: #000000;
-
   background-color: #f2f2f2;
   border: none;
   border-radius: 4px;
@@ -1287,13 +1275,13 @@ body {
 }
 
 .modal-counter-input {
-  position: relative;
   width: 31px;
+  position: relative;
   padding: 14px 4px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
-  line-height: 1.11;
+  line-height: 20px;
   font-weight: 700;
   text-align: center;
   color: #000000;
@@ -1312,10 +1300,10 @@ body {
 }
 
 .counter-button {
+  width: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
   background-color: #f2f2f2;
   border: none;
   cursor: pointer;
@@ -1369,7 +1357,7 @@ body {
   padding: 18px 15px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 120%;
+  line-height: 24px;
   border-radius: 10px;
 }
 
@@ -1377,8 +1365,7 @@ body {
   margin-right: 20px;
   margin-left: 20px;
   font-size: 16px;
-  line-height: 131%;
-  color: #333333;
+  line-height: 21px;
   text-align: start;
 }
 
@@ -1386,25 +1373,16 @@ body {
   color: #ff5757;
 }
 
-.modal-field-counter {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-column: auto;
-}
-
 .modal-form-tooltip {
-  position: relative;
-  margin-inline: 10px auto;
   align-self: center;
-  width: 26px;
-  height: 26px;
+  margin-right: auto;
+  position: relative;
 }
 
 .tooltip-toggle {
-  display: block;
   width: 26px;
   height: 26px;
+  display: block;
   padding: 0;
   background-color: #83b3d3;
   background-image: url("../images/icon-modal/info.svg");
@@ -1421,22 +1399,21 @@ body {
 }
 
 .tooltip-text {
+  width: 256px;
   position: absolute;
-  top: 100%;
   right: 50%;
   display: none;
   box-sizing: border-box;
-  width: 256px;
   margin-top: 15px;
-  padding: 20px 18px 23px 22px;
+  padding: 21px 20px 20px 23px;
   font-size: 16px;
-  line-height: 125%;
+  line-height: 20px;
   color: #ffffff;
-
   background-color: #333333;
   border-radius: 10px;
   box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
   transform: translateX(50%);
+  text-align: left;
 }
 
 .tooltip-text::before {
@@ -1460,11 +1437,11 @@ body {
 }
 
 .modal-close {
+  width: 52px;
+  height: 52px;
   position: absolute;
   top: 64px;
   right: 52px;
-  width: 52px;
-  height: 52px;
   background-color: #f2f2f2;
   background-image: url("../images/icon-modal/close.svg");
   background-repeat: no-repeat;
