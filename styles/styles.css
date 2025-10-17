@@ -929,6 +929,10 @@ body {
   text-decoration: none;
 }
 
+.hotel-card-link:hover .hotel-card-img {
+  transform: scale(1.1);
+}
+
 .hotel-card-link:first-child,
 .hotel-card-link:nth-child(2) {
   grid-column: 1/-1;
@@ -962,6 +966,10 @@ body {
   margin-top: 10px;
 }
 
+.one-stars {
+  width: 18px;
+}
+
 .two-stars {
   width: 42px;
 }
@@ -972,6 +980,10 @@ body {
 
 .four-stars {
   width: 89px;
+}
+
+.five-stars {
+  width: 124px
 }
 
 .pagination {
@@ -1149,4 +1161,331 @@ body {
 .pagination-current {
   color: #000000;
   background-color: #f2f2f2;
+  pointer-events: none;
+}
+
+
+/* Модальное окно */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-opened {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  box-sizing: border-box;
+  width: 717px;
+  margin: auto;
+  padding: 64px 70px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
+}
+
+.modal-title {
+  margin: 0;
+  margin-bottom: 64px;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 120%;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.modal-form {
+  display: grid;
+  margin: 0;
+  gap: 23px 88px;
+  grid-template-columns: 247px 242px;
+}
+
+.modal-form-field-group {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+}
+
+.modal-form-field-date {
+  grid-column: span 2;
+}
+
+.modal-form-label {
+  display: inline-block;
+  margin-top: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  color: #000000;
+  text-transform: capitalize;
+  word-break: break-all;
+}
+
+.modal-form-input-date-wrapper {
+  display: grid;
+  width: 440px;
+  gap: 4px;
+}
+
+.modal-form-input {
+  box-sizing: border-box;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 133%;
+  font-family: inherit;
+  color: #000000;
+
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 4px;
+}
+
+.modal-form-input:hover {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+}
+
+.modal-form-input:focus-visible {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+}
+
+.modal-form-input:placeholder-shown {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-form-input:disabled {
+  cursor: default;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.modal-form-input-date {
+  width: 440px;
+  padding: 13px 45px 11px 20px;
+  background-image: url("../images/icon-modal/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: top 14px right 20px;
+}
+
+.modal-form-input-date:focus-visible {
+  background-image: url("../images/icon-modal/calendar.svg");
+  background-repeat: no-repeat;
+  background-position: top 14px right 20px;
+}
+
+.modal-counter-input {
+  position: relative;
+  width: 31px;
+  padding: 14px 4px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 1.11;
+  font-weight: 700;
+  text-align: center;
+  color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+  appearance: textfield;
+}
+
+.modal-counter-input:hover,
+.modal-close:focus {
+  background-color: #e5e5e5;
+}
+
+.modal-counter {
+  display: flex;
+}
+
+.counter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+  outline-offset: -1px;
+  flex-shrink: 0;
+}
+
+.counter-minus {
+  border-radius: 4px 0 0 4px;
+}
+
+.counter-button::before {
+  content: "";
+  width: 14px;
+  height: 14px;
+  display: block;
+  background-color: rgba(117, 97, 87, 0.3);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: 14px 14px;
+}
+
+.counter-plus {
+  border-radius: 0 4px 4px 0;
+}
+
+.counter-minus::before {
+  mask-image: url("../images/icon-modal/minus.svg");
+}
+
+.counter-plus::before {
+  mask-image: url("../images/icon-modal/plus.svg")
+}
+
+.counter-minus:hover::before,
+.counter-minus:focus::before,
+.counter-plus:hover::before,
+.counter-plus:focus::before {
+  background-color: #000000;
+}
+
+.counter-minus:active::before,
+.counter-plus:active::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+.modal-submit-button {
+  margin-top: 25px;
+  grid-column: span 2;
+  padding: 18px 15px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 120%;
+  border-radius: 10px;
+}
+
+.modal-form-text {
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 16px;
+  line-height: 131%;
+  color: #333333;
+  text-align: start;
+}
+
+.modal-form-text-error {
+  color: #ff5757;
+}
+
+.modal-field-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-column: auto;
+}
+
+.modal-form-tooltip {
+  position: relative;
+  margin-inline: 10px auto;
+  align-self: center;
+  width: 26px;
+  height: 26px;
+}
+
+.tooltip-toggle {
+  display: block;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  background-color: #83b3d3;
+  background-image: url("../images/icon-modal/info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text {
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  display: none;
+  box-sizing: border-box;
+  width: 256px;
+  margin-top: 15px;
+  padding: 20px 18px 23px 22px;
+  font-size: 16px;
+  line-height: 125%;
+  color: #ffffff;
+
+  background-color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.3);
+  transform: translateX(50%);
+}
+
+.tooltip-text::before {
+  content: "";
+  width: 19px;
+  height: 9px;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  background-image: url("../images/icon-modal/tooltip-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  transform: translateX(-50%);
+}
+
+.modal-form {
+  display: grid;
+  margin: 0;
+  gap: 23px 88px;
+  grid-template-columns: 247px 242px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 64px;
+  right: 52px;
+  width: 52px;
+  height: 52px;
+  background-color: #f2f2f2;
+  background-image: url("../images/icon-modal/close.svg");
+  background-repeat: no-repeat;
+  background-position: top 19px left 19px;
+  border: none;
+  border-radius: 100%;
+  outline: none;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  background-color: #e6e6e6;
+}
+
+.modal-close:focus-visible {
+  background-color: #e6e6e6;
+  outline: 3px solid #83b3d3;
+  ;
+}
+
+.modal-close:active {
+  background-color: #e6e6e6;
+  opacity: 0.3;
 }
