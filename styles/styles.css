@@ -564,16 +564,20 @@ body {
   cursor: pointer;
 }
 
-.breadcrumbs-link:hover {
+.breadcrumbs-link:not(:last-child):hover {
   color: rgba(255, 255, 255, 0.6);
 }
 
-.breadcrumbs-link:focus {
+.breadcrumbs-link:not(:last-child):focus {
   color: #ffffff;
 }
 
-.breadcrumbs-link:active {
+.breadcrumbs-link:not(:last-child):active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.breadcrumbs-item:last-of-type {
+  pointer-events: none;
 }
 
 .breadcrumbs-item:first-child .breadcrumbs-link::before {
@@ -905,6 +909,14 @@ body {
   margin: 0;
 }
 
+.hotel-card-title:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.hotel-card-title:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .hotel-card-img {
   max-width: 100%;
   height: auto;
@@ -1163,6 +1175,8 @@ body {
   background-color: rgba(242, 242, 242, 0.8);
 }
 
+/* Для открытия модального окна, удалить класс */
+
 .modal-closed {
   display: none;
 }
@@ -1244,12 +1258,6 @@ body {
   background-color: #e6e6e6;
 }
 
-.modal-form-input:focus-visible {
-  color: rgba(0, 0, 0, 0.6);
-  background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
-}
-
 .modal-form-input:placeholder-shown {
   color: rgba(0, 0, 0, 0.6);
 }
@@ -1263,12 +1271,6 @@ body {
 .modal-form-input-date {
   width: 440px;
   padding: 13px 45px 11px 20px;
-  background-image: url("../images/icon-modal/calendar.svg");
-  background-repeat: no-repeat;
-  background-position: top 14px right 20px;
-}
-
-.modal-form-input-date:focus-visible {
   background-image: url("../images/icon-modal/calendar.svg");
   background-repeat: no-repeat;
   background-position: top 14px right 20px;
@@ -1290,8 +1292,7 @@ body {
   appearance: textfield;
 }
 
-.modal-counter-input:hover,
-.modal-close:focus {
+.modal-counter-input:hover {
   background-color: #e5e5e5;
 }
 
@@ -1349,7 +1350,6 @@ body {
 .counter-plus:active::before {
   background-color: rgba(0, 0, 0, 0.2);
 }
-
 
 .modal-submit-button {
   margin-top: 25px;
@@ -1448,7 +1448,6 @@ body {
   background-position: top 19px left 19px;
   border: none;
   border-radius: 100%;
-  outline: none;
   cursor: pointer;
 }
 
@@ -1456,13 +1455,10 @@ body {
   background-color: #e6e6e6;
 }
 
-.modal-close:focus-visible {
+.modal-close:focus {
   background-color: #e6e6e6;
-  outline: 3px solid #83b3d3;
-  ;
 }
 
 .modal-close:active {
-  background-color: #e6e6e6;
-  opacity: 0.3;
+  background-color: rgba(230, 230, 230, 0.3);
 }
