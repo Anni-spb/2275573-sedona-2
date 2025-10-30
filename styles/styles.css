@@ -85,7 +85,7 @@ body {
 }
 
 .user-list {
-  max-width: 335px;
+  max-width: 340px;
   justify-content: end;
   align-items: center;
 }
@@ -358,7 +358,7 @@ body {
 
 .subscribe {
   text-align: center;
-  padding: 96px 0 104px;
+  padding: 97px 0 104px;
   margin: 0 auto;
 }
 
@@ -384,11 +384,12 @@ body {
 }
 
 .subscribe-form input {
-  flex-grow: 1;
-  padding: 15px 20px 14px;
+  width: 452px;
+  box-sizing: border-box;
   font-family: inherit;
+  padding: 15px 20px 14px;
   font-size: 18px;
-  line-height: 1.33;
+  line-height: 24px;
   color: #000000;
   background-color: #f2f2f2;
   border: none;
@@ -403,13 +404,6 @@ body {
 .subscribe-form input:disabled {
   background-color: rgba(242, 242, 242, 0.4);
   pointer-events: none;
-}
-
-.field {
-  font-family: inherit;
-  font-size: 18px;
-  line-height: 24px;
-  background-color: #f2f2f2;
 }
 
 .main-footer {
@@ -471,11 +465,13 @@ body {
 
 .phone-wrapper {
   width: 500px;
-  margin-left: 57px;
-  text-align: start;
+  margin-left: 54px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .contact-phone {
+  width: 335px;
   color: #000000;
   font-size: 40px;
   line-height: 40px;
@@ -585,7 +581,6 @@ body {
   display: block;
   background: url("../images/breadcrumbs-icon.svg") no-repeat center;
   background-size: contain;
-  margin-top: 3px;
 }
 
 .breadcrumbs-item:first-child .breadcrumbs-link:hover::before {
@@ -640,12 +635,12 @@ body {
 }
 
 .filter-group:not(:last-of-type) {
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .filter-group:nth-of-type(3) {
   max-width: 300px;
-  margin-left: 70px;
+  margin-left: auto;
 }
 
 .filter-button-wrapper {
@@ -695,6 +690,11 @@ body {
   opacity: 0.3;
 }
 
+.control:has(.control-input:disabled) {
+  pointer-events: none;
+  opacity: 0.2;
+}
+
 .control-input[type="checkbox"]:checked {
   background-image: url(../images/check.svg);
   background-size: 12px 10px;
@@ -722,7 +722,7 @@ body {
   width: 143px;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr 54px;
+  grid-template-columns: 1fr 60px;
   align-items: center;
 }
 
@@ -836,7 +836,7 @@ body {
 }
 
 .hotels-result {
-  max-width: 450px;
+  max-width: 465px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -857,7 +857,7 @@ body {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
-  padding: 12px 40px 12px 20px;
+  padding: 12px 40px 12px 18px;
   background-image: url("../images/arrow-select.svg");
   background-repeat: no-repeat;
   background-position: right 17px center;
@@ -872,13 +872,14 @@ body {
 .hotels-select:disabled {
   border-color: rgba(0, 0, 0, 0.3);
   color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
 }
 
 .display-cards {
   max-width: 220px;
   display: flex;
   flex-wrap: wrap;
-  gap: 0 8px;
+  gap: 8px;
 }
 
 .hotels-list {
@@ -1023,6 +1024,7 @@ body {
 }
 
 .subscribe-button {
+  max-width: 270px;
   font-size: 20px;
   line-height: 36px;
   padding: 8px 50px;
@@ -1080,6 +1082,7 @@ body {
 
 .button:disabled {
   background-color: #e5e5e5;
+  pointer-events: none;
 }
 
 .filter-reset {
@@ -1099,6 +1102,7 @@ body {
 }
 
 .filter-reset:disabled {
+  background-color: transparent;
   color: rgba(255, 255, 255, 0.1);
 
 }
@@ -1263,8 +1267,7 @@ body {
 }
 
 .modal-form-input:disabled {
-  cursor: default;
-  opacity: 0.6;
+  opacity: 0.2;
   pointer-events: none;
 }
 
@@ -1279,7 +1282,7 @@ body {
 .modal-counter-input {
   width: 31px;
   position: relative;
-  padding: 14px 4px;
+  padding: 12px 4px;
   box-sizing: border-box;
   font-family: inherit;
   font-size: 18px;
@@ -1294,6 +1297,11 @@ body {
 
 .modal-counter-input:hover {
   background-color: #e5e5e5;
+}
+
+.modal-counter-input:disabled {
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.2);
 }
 
 .modal-counter {
@@ -1315,6 +1323,14 @@ body {
   border: none;
   cursor: pointer;
   flex-shrink: 0;
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+.counter-button:hover,
+.counter-button:focus,
+.counter-button:active {
+  opacity: 1;
 }
 
 .counter-minus {
@@ -1329,7 +1345,7 @@ body {
   height: 2px;
   display: block;
   position: absolute;
-  background-color: #7561574d;
+  background-color: #756157
 }
 
 .counter-plus {
@@ -1339,8 +1355,6 @@ body {
 .counter-plus::after {
   transform: rotate(90deg);
 }
-
-
 
 .counter-minus:hover::before,
 .counter-minus:focus::before,
@@ -1354,6 +1368,15 @@ body {
 .counter-minus:active::before,
 .counter-plus:active::before,
 .counter-plus:active::after {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.counter-button:disabled {
+  pointer-events: none;
+}
+
+.counter-button:disabled::before,
+.counter-button:disabled::after {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
