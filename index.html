@@ -167,9 +167,6 @@
 
       <div class="modal modal-closed">
         <div class="modal-content">
-          <button class="modal-close" type="button">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
           <section>
             <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
             <form class="modal-form modal-form" action="https://echo.htmlacademy.ru" method="post">
@@ -195,7 +192,7 @@
                   <button class="counter-button counter-minus" type="button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
-                  <input class="modal-counter-input" type="text" name="adults" id="adults" value="2" placeholder="2">
+                  <input class="modal-counter-input" type="number" name="adults" id="adults" value="2" placeholder="2">
                   <button class="counter-button counter-plus" type="button">
                     <span class="visually-hidden">Увеличить</span>
                   </button>
@@ -214,7 +211,7 @@
                   <button class="counter-button counter-minus" type="button">
                     <span class="visually-hidden">Уменьшить</span>
                   </button>
-                  <input class="modal-counter-input" type="text" name="children-count" id="children-field" value="2"
+                  <input class="modal-counter-input" type="number" name="children-count" id="children-field" value="2"
                     placeholder="2">
                   <button class="counter-button counter-plus" type="button">
                     <span class="visually-hidden">Увеличить</span>
@@ -223,6 +220,9 @@
               </div>
               <button class="modal-submit-button button button-primary" type="submit">Найти</button>
             </form>
+            <button class="modal-close" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
           </section>
         </div>
       </div>
