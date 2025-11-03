@@ -130,6 +130,7 @@ body {
 }
 
 .user-link.button {
+  max-width: 190px;
   padding: 8px 34px;
   margin-left: 20px;
 }
@@ -639,11 +640,12 @@ body {
 }
 
 .filter-group:nth-of-type(3) {
-  max-width: 300px;
+  max-width: 290px;
   margin-left: auto;
 }
 
 .filter-button-wrapper {
+  max-width: 200px;
   display: flex;
   flex-direction: column;
   gap: 32px;
@@ -834,7 +836,7 @@ body {
 }
 
 .hotels-wrapper {
-  align-items: center;
+  align-items: start;
   display: flex;
   margin-bottom: 40px;
   gap: 70px;
@@ -847,6 +849,7 @@ body {
   line-height: 36px;
   color: #000000;
   text-transform: uppercase;
+  padding-top: 7px;
   margin: 0;
   margin-right: auto;
 }
@@ -897,8 +900,8 @@ body {
 }
 
 .hotel-card {
-  padding: 20px 19px 18px;
-  border: 1px solid #e5e5e5;
+  padding: 20px;
+  outline: 1px solid #e5e5e5;
   box-sizing: border-box;
   border-radius: 4px;
   display: grid;
@@ -1113,7 +1116,8 @@ body {
 }
 
 .filter-button-wrapper .button {
-  padding: 8px 50px;
+  min-width: 191px;
+  padding: 8px 20px;
 }
 
 .button-cards {
@@ -1150,6 +1154,7 @@ body {
 }
 
 .hotel-card-button {
+  align-self: flex-start;
   padding: 8px 18px;
 }
 
