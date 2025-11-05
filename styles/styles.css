@@ -366,7 +366,7 @@ body {
 .subscribe-main {
   color: #ffffff;
   background-color: #756157;
-  background-image: url("../images/subscribe-backgroud.png");
+  background-image: url("../images/subscribe-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -501,7 +501,7 @@ body {
   height: 34px;
   display: block;
   background-color: #000000;
-  mask-image: url(../images/html-academy-logo.svg);
+  mask-image: url("../images/html-academy-logo.svg");
   mask-position: center;
   mask-repeat: no-repeat;
   mask-size: 116px 34px;
@@ -522,7 +522,7 @@ body {
 .hotel-header {
   color: #ffffff;
   background-color: #756157;
-  background-image: url("../images/filter-background.png");
+  background-image: url("../images/filter-background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 35px 70px 70px;
@@ -698,7 +698,7 @@ body {
 }
 
 .control-input[type="checkbox"]:checked {
-  background-image: url(../images/check.svg);
+  background-image: url("../images/check.svg");
   background-size: 12px 10px;
   background-position: center;
   background-repeat: no-repeat;
@@ -856,6 +856,7 @@ body {
 
 .hotels-select {
   width: 292px;
+  flex-shrink: 0;
   font-family: inherit;
   font-style: normal;
   font-weight: 400;
@@ -884,7 +885,7 @@ body {
 }
 
 .display-cards {
-  max-width: 220px;
+  max-width: 160px;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
@@ -1142,15 +1143,15 @@ body {
 }
 
 .button-cards:first-child {
-  background-image: url(../images/view-icons/view-tiles.svg);
+  background-image: url("../images/view-icons/view-tiles.svg");
 }
 
 .button-cards:nth-child(2) {
-  background-image: url(../images/view-icons/view-large.svg);
+  background-image: url("../images/view-icons/view-large.svg");
 }
 
 .button-cards:nth-child(3) {
-  background-image: url(../images/view-icons/view-list.svg);
+  background-image: url("../images/view-icons/view-list.svg");
 }
 
 .hotel-card-button {
